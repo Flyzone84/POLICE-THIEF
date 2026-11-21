@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Fraunces', 'Noto Sans Malayalam', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', 'Noto Sans Malayalam', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #111622;
+    color: #F5EFE2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Warm nostalgic paper card surface */
+.paper-card {
+  background-color: #F6EFE0;
+  color: #1F1B18;
+  background-image:
+    radial-gradient(rgba(31, 27, 24, 0.035) 1px, transparent 0),
+    linear-gradient(165deg, rgba(255, 255, 255, 0.45) 0%, rgba(232, 219, 194, 0.35) 100%);
+  background-size: 16px 16px, 100% 100%;
+  box-shadow:
+    0 12px 30px -8px rgba(0, 0, 0, 0.55),
+    0 2px 6px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgba(139, 115, 85, 0.28);
+}
+
+/* Folded paper chit pattern */
+.folded-chit {
+  background-color: #EFE4CE;
+  color: #241E1A;
+  background-image:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.55) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(164, 138, 102, 0.14) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(164, 138, 102, 0.08) 25%, transparent 25%);
+  box-shadow:
+    0 8px 20px -6px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 0 0 1px rgba(139, 115, 85, 0.35);
+}
+
+/* Subtle dark slate table canvas */
+.table-canvas {
+  background-color: #111622;
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(217, 164, 65, 0.08) 0%, transparent 58%),
+    radial-gradient(ellipse at 50% 100%, rgba(27, 36, 56, 0.7) 0%, transparent 65%);
+}
+
+/* 3D card flip perspective */
+.perspective-1000 {
+  perspective: 1100px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

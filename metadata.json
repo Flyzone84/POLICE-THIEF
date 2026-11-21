@@ -1,0 +1,6 @@
+{
+  "name": "POLICE&THEIF",
+  "description": "A nostalgic Kerala-inspired multiplayer paper-chit game. Pick your fate, uncover hidden roles, and catch the thief.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
